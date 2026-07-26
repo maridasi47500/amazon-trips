@@ -1,31 +1,18 @@
+{% extends 'base.html' %}
+
+{% block montitre %}
+debut de mes mots: bienvenue dans Amazon Trip (ou Tripes) ou Amazon gust
+{% endblock %}
+{% block content %}
 <h1># amazon-trips</h1>
-<p>
-entre des lieux ou tu es allée
-<input />
-<button>je suis allée là</button>
-</p>
-<p>
-entre des sports
-<label>
-nage
-<input type="checkbox"/>
-</label>
-<label>
-velo
-<input type="checkbox"/>
-</label>
-<label>
-football
-<input type="checkbox"/>
-</label>
-</p>
-<p>
-entre des mindset liés à des destinations
-<textarea>
-</textarea>
-</p>
-<p>
-entre des mindset liés à un job/et une destination
-<textarea>
-</textarea>
-</p>
+{% for x in users | reverse %}
+ <li>{{ x["first_name"]  }}</li>
+
+{% endfor %} 
+fin de mes mots : je choisis un voyage ou plusieurs que jai fait pour le lier à des records que jai fait dans un sport
+ou Je fais du sport, et je gagne à un sport par rapport à un voyage que javais fait
+{% endblock %}
+{% block liens %}
+<a href="/">welcome</a>
+{% endblock %}
+<a href="/add_one_user"> add one user</a><a href="/add_one_country"> add one country</a><a href="/add_one_city"> add one city</a><a href="/add_one_trip"> add one trip</a><a href="/add_one_sport"> add one sport</a><a href="/add_one_record"> add one record</a><a href="/add_one_user_broken_record"> add one user_broken_record</a><a href="/add_one_trip_links"> add one trip_links</a>
