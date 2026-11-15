@@ -19,3 +19,4 @@ digital ids , trip digital guide, social facilitator, quel voyage font de toi un
 | gps | oui |
 | images creees | non |
 | libraries python/gem rails speciales | non |
+| sessions de entrainement | oui |
